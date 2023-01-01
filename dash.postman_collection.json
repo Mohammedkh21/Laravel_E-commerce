@@ -1,0 +1,1640 @@
+{
+	"info": {
+		"_postman_id": "d95f2945-ddbc-47e1-ba3b-2334a960c309",
+		"name": "dash",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22341381"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "AdminLogin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Login?email=aa@gmail.com&password=aa@gmail.com",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "aa@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "aa@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AdminLogout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Logout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admins",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Admins",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Admins"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddNewAdmin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/AddNewAdmin?name=api@gmail.com&email=api@gmail.com&password=api@gmail.com&password_confirm=api@gmail.com",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"AddNewAdmin"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "api@gmail.com"
+										},
+										{
+											"key": "email",
+											"value": "api@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "api@gmail.com"
+										},
+										{
+											"key": "password_confirm",
+											"value": "api@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Admin?id=16",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Admin"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "16"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteAdmin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/DeleteAdmin?id=17",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"DeleteAdmin"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "17"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Category/Categorys",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Category",
+										"Categorys"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Gategory",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Category/Category?id=22",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Category",
+										"Category"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "22"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddNewCategory",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Category/AddNewCategory?name=nnn",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Category",
+										"AddNewCategory"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "nnn"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteCategory",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Category/DeleteCategory?id=22",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Category",
+										"DeleteCategory"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "22"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Seller",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Seller/Sellers",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Seller",
+										"Sellers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "seller",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Seller/Seller?id=9",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Seller",
+										"Seller"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddNewSeller",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Seller/AddNewSeller?name=ssdd@gmail.com&email=ssdd@gmail.com&password=ssdd@gmail.com&password_confirm=ssdd@gmail.com",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Seller",
+										"AddNewSeller"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "ssdd@gmail.com"
+										},
+										{
+											"key": "email",
+											"value": "ssdd@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "ssdd@gmail.com"
+										},
+										{
+											"key": "password_confirm",
+											"value": "ssdd@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteSeller",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Seller/DeleteSeller?id=13",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Seller",
+										"DeleteSeller"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "13"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Product/Products",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Product",
+										"Products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Product/Product?id=36",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Product",
+										"Product"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "36"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddNewProduct",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/OMEN/Desktop/test.JPG"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Product/AddNewProduct?name=api2&title=api2&seller_id=11&category_id=6&currencie_id=140&quantity=55&price=55&status=1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Product",
+										"AddNewProduct"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "api2"
+										},
+										{
+											"key": "title",
+											"value": "api2"
+										},
+										{
+											"key": "seller_id",
+											"value": "11"
+										},
+										{
+											"key": "category_id",
+											"value": "6"
+										},
+										{
+											"key": "currencie_id",
+											"value": "140"
+										},
+										{
+											"key": "quantity",
+											"value": "55"
+										},
+										{
+											"key": "price",
+											"value": "55"
+										},
+										{
+											"key": "status",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteSeller",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Product/DeleteSeller?id=44",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Product",
+										"DeleteSeller"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "44"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Order/Orders",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Order",
+										"Orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Order",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Order/Order?id=11",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Order",
+										"Order"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Order/MakeOrderAsComplete?id=12",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Order",
+										"MakeOrderAsComplete"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Currencies",
+					"item": [
+						{
+							"name": "all",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Currencies/Currencies",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Currencies",
+										"Currencies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Currencie",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Currencies/Currencie?id=8",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Currencies",
+										"Currencie"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateCurrencies",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "30|HbJ8vEoMc4A8l2a3KzYXQLsIj3zqoaQSoAghabnL",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Admin/Currencies/UpdateCurrencies?id=8&status=1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Admin",
+										"Currencies",
+										"UpdateCurrencies"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "8"
+										},
+										{
+											"key": "status",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "UserLogin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "29|BzdcldDvvNtHCwifxXYPd36c3VIotAAOeEo0Y5d9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/User/Login?email=sss@gmail.com&password=sss@gmail.com",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"User",
+										"Login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "sss@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "sss@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UserLogout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "28|hwqnKkJV9DJ6Wvsfvn4pNhxvlfNAWKZJ5xJypbI7",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/User/Logout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"User",
+										"Logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ProductCart",
+					"item": [
+						{
+							"name": "MyCartProduct",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "29|BzdcldDvvNtHCwifxXYPd36c3VIotAAOeEo0Y5d9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/User/Cart",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"User",
+										"Cart"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AddProductToCart",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "29|BzdcldDvvNtHCwifxXYPd36c3VIotAAOeEo0Y5d9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/User/Cart/add?product_id=36&quantity=3",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"User",
+										"Cart",
+										"add"
+									],
+									"query": [
+										{
+											"key": "product_id",
+											"value": "36"
+										},
+										{
+											"key": "quantity",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteProductFromCart",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "29|BzdcldDvvNtHCwifxXYPd36c3VIotAAOeEo0Y5d9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/User/Cart/delete?product_id=34",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"User",
+										"Cart",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "product_id",
+											"value": "34"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Checkout",
+					"item": [
+						{
+							"name": "checkout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "29|BzdcldDvvNtHCwifxXYPd36c3VIotAAOeEo0Y5d9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/User/Checkout?pay_method=pay_when_received&address=gaza",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"User",
+										"Checkout"
+									],
+									"query": [
+										{
+											"key": "pay_method",
+											"value": "pay_when_received"
+										},
+										{
+											"key": "address",
+											"value": "gaza"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "MyOrders",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "29|BzdcldDvvNtHCwifxXYPd36c3VIotAAOeEo0Y5d9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/User/Checkout/MyOrders",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"User",
+										"Checkout",
+										"MyOrders"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Seller",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "SellerLogin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "21|c68LRoILgyTSL5gNBz3oXxjbw59ZhUqad9P0Rrts",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Seller/Login?email=ee@gmail.com&password=ee@gmail.com",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Seller",
+										"Login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "ee@gmail.com"
+										},
+										{
+											"key": "password",
+											"value": "ee@gmail.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SellerLogout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "27|70RxFmrkwUOSQxSyfhVsP9UUjbZi7nzKJ8zavjGX",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Seller/Logout",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Seller",
+										"Logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "AddNewProduct",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "27|70RxFmrkwUOSQxSyfhVsP9UUjbZi7nzKJ8zavjGX",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Seller/product/all",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Seller",
+										"product",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "27|70RxFmrkwUOSQxSyfhVsP9UUjbZi7nzKJ8zavjGX",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Seller/product/product?id=37",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Seller",
+										"product",
+										"product"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "37"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addProduct",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "27|70RxFmrkwUOSQxSyfhVsP9UUjbZi7nzKJ8zavjGX",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/OMEN/Desktop/test.JPG"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Seller/product/add?name=api2&title=api2&quantity=22&category_id=11&currencie_id=141&price=33&status=1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Seller",
+										"product",
+										"add"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "api2"
+										},
+										{
+											"key": "title",
+											"value": "api2"
+										},
+										{
+											"key": "quantity",
+											"value": "22"
+										},
+										{
+											"key": "category_id",
+											"value": "11"
+										},
+										{
+											"key": "currencie_id",
+											"value": "141"
+										},
+										{
+											"key": "price",
+											"value": "33"
+										},
+										{
+											"key": "status",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "27|70RxFmrkwUOSQxSyfhVsP9UUjbZi7nzKJ8zavjGX",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/Seller/product/delete?product_id=38",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"Seller",
+										"product",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "product_id",
+											"value": "38"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
