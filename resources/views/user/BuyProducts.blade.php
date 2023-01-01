@@ -34,6 +34,12 @@
         </div>
         -->
 
+        @env('local')
+            <h1>{{ config('app.env') }}</h1>
+        @endenv
+        <h1>{{ config('app.env') }}</h1>
+
+
 
         <div class="row" style="padding: 0px">
         @foreach($products as $product)

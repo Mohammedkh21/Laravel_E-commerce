@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => 'tt', //env('APP_ENV', 'production'),
 
     /*
     |--------------------------------------------------------------------------
@@ -210,6 +210,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'Auth' => Illuminate\Support\Facades\Auth::class,
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 

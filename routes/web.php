@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('t',function (){
+    return Auth::id();
+});
 
 Auth::routes();
 
