@@ -25,32 +25,9 @@ class MailController extends Controller
             'mail_type'=>'required|in:all,users,admins,sellers,visitors',
             'email_text'=>'required'
         ]);
-        $emails =[];
-        switch ($request->mail_type){
-            case 'all':
-                array_push($emails,User::all()->pluck('email'));
-                array_push($emails,Admin::all()->pluck('email'));
-                array_push($emails,Seller::all()->pluck('email'));
-                array_push($emails,VistorMail::all()->pluck('email'));
-                break;
-            case 'users':
-                array_push($emails,User::all()->pluck('email'));
-                break;
-            case 'admins':
-                array_push($emails,Admin::all()->pluck('email'));
-                break;
-            case 'sellers':
-                array_push($emails,Seller::all()->pluck('email'));
-                break;
-            case 'visitors':
-                array_push($emails,VistorMail::all()->pluck('email'));
-                break;
-        }
+        $this->dispatch(new MailJob($request->mail_type,$request->email_text));
 
-        $this->dispatch(new MailJob($emails,$request->email_text));
-//        $this->dispatch((new MailJob($emails,$request->email_text))->onQueue('redis'));
-
-        return response()->json(['status'=>true,'data'=>$emails]);
+        return response()->json(['status'=>true]);
     }
 
 }

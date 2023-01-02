@@ -3,6 +3,10 @@
 namespace App\Jobs;
 
 use App\Mail\SendMailTo;
+use App\Models\Admin;
+use App\Models\Seller;
+use App\Models\User;
+use App\Models\VistorMail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -20,11 +24,11 @@ class MailJob implements ShouldQueue
      *
      * @return void
      */
-    public $emails ;
+    public $mail_type ;
     public   $text = '';
-    public function __construct($emails,$text)
+    public function __construct($mail_type,$text)
     {
-        $this->emails = $emails;
+        $this->mail_type = $mail_type;
         $this->text = $text;
     }
 
@@ -35,7 +39,29 @@ class MailJob implements ShouldQueue
      */
     public function handle()
     {
-        foreach ($this->emails as $type){
+        $emails =[];
+        switch ($this->mail_type){
+            case 'all':
+                array_push($emails,User::all()->pluck('email'));
+                array_push($emails,Admin::all()->pluck('email'));
+                array_push($emails,Seller::all()->pluck('email'));
+                array_push($emails,VistorMail::all()->pluck('email'));
+                break;
+            case 'users':
+                array_push($emails,User::all()->pluck('email'));
+                break;
+            case 'admins':
+                array_push($emails,Admin::all()->pluck('email'));
+                break;
+            case 'sellers':
+                array_push($emails,Seller::all()->pluck('email'));
+                break;
+            case 'visitors':
+                array_push($emails,VistorMail::all()->pluck('email'));
+                break;
+        }
+
+        foreach ($emails as $type){
             Mail::to($type)->send(new SendMailTo($this->text));
         }
     }
