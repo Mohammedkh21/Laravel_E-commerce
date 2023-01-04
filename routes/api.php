@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['prefix'=>'User'],function (){
     Route::post('Login',[\App\Http\Controllers\Api\User\AuthController::class,'Login']);
-    Route::group(['middleware'=>['auth:sanctum']],function (){
+    Route::group(['middleware'=>['auth:sanctum','sanctum_guard:user']],function (){
         Route::post('Logout',[\App\Http\Controllers\Api\User\AuthController::class,'Logout']);
         Route::group(['prefix'=>'Cart'],function (){
             Route::get('/',[\App\Http\Controllers\Api\User\CartController::class,'MyCartProduct']);
@@ -40,7 +40,7 @@ Route::group(['prefix'=>'User'],function (){
 
 Route::group(['prefix'=>'Seller'],function (){
     Route::post('Login',[\App\Http\Controllers\Api\Seller\AuthController::class,'Login']);
-    Route::group(['middleware'=>['auth:sanctum']],function (){
+    Route::group(['middleware'=>['auth:sanctum','sanctum_guard:seller']],function (){
         Route::post('Logout',[\App\Http\Controllers\Api\Seller\AuthController::class,'Logout']);
         Route::group(['prefix'=>'product'],function (){
             Route::get('all',[\App\Http\Controllers\Api\Seller\ProductController::class,'AllProduct']);
@@ -60,7 +60,7 @@ Route::group(['prefix'=>'Seller'],function (){
 
 Route::group(['prefix'=>'Admin'],function (){
     Route::post('Login',[\App\Http\Controllers\Api\Admin\AuthController::class,'Login']);
-    Route::group(['middleware'=>'auth:sanctum'],function (){
+    Route::group(['middleware'=>['auth:sanctum','sanctum_guard:admin']],function (){
         Route::post('Logout',[\App\Http\Controllers\Api\Admin\AuthController::class,'Logout']);
         Route::get('Admins',[\App\Http\Controllers\Api\Admin\AdminController::class,'Admins']);
         Route::get('Admin',[\App\Http\Controllers\Api\Admin\AdminController::class,'Admin']);
